@@ -62,18 +62,27 @@ p, h1, h2, h3, h4, h5, h6 {
 
 }
 
-.page-wrapper {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+/*Main----------------------------------------------------*/
+
+body {
 	background: var(--color-cream);
 
 }
 
+p {
+	font-size: var(--fs-paragraph);
+}
 
-/*Left-side----------------------------------------------------*/
+
+.page-wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .card {
 	display: flex;
 	max-width: 600px;
@@ -87,11 +96,14 @@ p, h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 
+
+/*Left-side Desktop----------------------------------------------------*/
+
 .left-image {
 	width: 100%;
 }
 
-/*Right-side----------------------------------------------------*/
+/*Right-side Desktop----------------------------------------------------*/
 
 .right-info {
 	display: flex;
@@ -104,6 +116,18 @@ p, h1, h2, h3, h4, h5, h6 {
 	justify-content: space-evenly;
 	margin: 0 30px;
 }
+
+.title {
+	text-transform: uppercase;
+	letter-spacing: 5.5px;
+}
+
+
+.perfume-name {
+	font-size: 32px;
+	line-height: 36px;
+}
+
 
 .title, .description, #original-price, button {
 	font-family: var(--ff-montserrat);
@@ -126,24 +150,27 @@ p, h1, h2, h3, h4, h5, h6 {
 	text-decoration: line-through;
 	margin-left: 30px;
 }
-.title {
-	text-transform: uppercase;
-	letter-spacing: 5.5px;
-}
-
-p {
-	font-size: var(--fs-paragraph);
-}
-
-.perfume-name {
-	font-size: 32px;
-	line-height: 36px;
-}
 
 #current-price {
 	color: var(--color-dark-cyan);
 	font-size: 31px;
 }
+
+/*Accessibility----------------------------------------------------*/
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+
+
+/*Button----------------------------------------------------*/
 
 .button {
 	background: var(--color-dark-cyan);
@@ -172,15 +199,27 @@ p {
 	color: var(--color-white);
 }
 
+.button:focus {
+	background: var(--color-dark-green);
+	color: var(--color-white);
+}
 
+
+
+/*Media Query----------------------------------------------------*/
 
 @media (max-width: 600px) {
+
+	.page-wrapper{
+		flex-direction: column;
+	}
 
 	.card {
 		flex-direction: column;
 		flex-wrap: wrap;
 		margin-left: 20px;
 		margin-right: 20px;
+		flex-shrink: 0;
 	}
 
 	#right-info-content {
@@ -188,6 +227,7 @@ p {
 		gap: 1rem;
 		padding: 1.5rem 0.4rem;
 	}
+
 
 }
 
