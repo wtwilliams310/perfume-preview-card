@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/product-preview-card-component-BCN3-vimD0](https://your-solution-url.com)
-- Live Site URL: [https://stalwart-souffle-6e95e1.netlify.app](https://your-live-site-url.com)
+- Solution URL: [challenge solution](https://www.frontendmentor.io/solutions/product-preview-card-component-BCN3-vimD0)
+- Live Site URL: [My projects](https://stalwart-souffle-6e95e1.netlify.app)
 
 ## My process
 
